@@ -1,0 +1,110 @@
+<p>update works!</p>
+<div class="sun">
+    <!-- <img src="assets/image/789.png" alt="image"> -->
+    <div class="box">
+        <h2>CARNET APPLICATION</h2>
+        <h3 class="text1">Registration Form</h3>
+        
+        <form [formGroup]='registerform'>
+              <div class="formgroup inputbox text">
+                  <label for="ID">ID : </label>
+                  <input type="text" id="ID" formControlName="ID" class="form-control" placeholder="ID...." required="">
+                  <span class="text2" *ngIf="registerform.controls.ID.invalid && registerform.controls.ID.touched">Please Enter You ID...</span>
+              </div>
+            <div class="formgroup inputbox text">
+                <label for="fname">First Name : </label>
+                <input type="text" id="fname" formControlName="NAME" class="form-control" placeholder="You Name..." required="">
+                <span class="text2" *ngIf="registerform.controls.NAME.invalid && registerform.controls.NAME.touched ">Please Enter Frist Name...</span>
+  
+                
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text">
+                <label for="lname">Last Name : </label>
+                <input type="text" id="lname" formControlName="LASTNAME" class="form-control" placeholder="Last Name..." required="">
+                <span class="text2" *ngIf="registerform.controls.LASTNAME.invalid && registerform.controls.LASTNAME.touched">Please Enter You Last Name...</span>
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text">
+                <label for="email">Email Id : </label>
+                <input type="text" id="email" formControlName="EMAILID" class="form-control" placeholder="You email..." required="">
+                <span class="text2" *ngIf="registerform.controls.EMAILID.invalid && registerform.controls.EMAILID.touched">Please Enter You Email Id...</span>
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text">
+                <label for="phone">Phone No : </label>
+                <input type="text" id="phone" formControlName="PHONENUMBER" class="form-control" placeholder="You Phone No..." required="">
+                <span class="text2" *ngIf="registerform.controls.PHONENUMBER.invalid && registerform.controls.PHONENUMBER.touched">Please Enter You Phone No...</span>
+            </div>
+            <br>
+  
+            <!-- <div class="formgroup inputbox text" formControlName="COUNTRY" >
+  
+                <label for="country">Country : </label>
+                <select id="country" formControlName="COUNTRY" required="">
+                <option value="India" formControlName="COUNTRY">India</option>
+                <option value="Srilanka" formControlName="COUNTRY">Sri Lanka</option>
+                <option value="Nepal" formControlName="COUNTRY">Nepal</option>
+                <option value="Bangladesh" formControlName="COUNTRY">Bangladesh</option>
+                <option value="Bhutan" formControlName="COUNTRY">Bhutan</option>
+                </select>
+  
+            </div> -->
+            <br>
+  
+            <!-- <div class="formgroup inputbox text" formControlName="STATE" >
+  
+                <label for="state">State : </label>
+                <select id="state"formControlName="STATE" required="">
+                <option formControlName="STATE" value="Andhra Pradesh(A.P)">Andhra Pradesh(A.P)</option>
+                <option formControlName="STATE" value="Telangana(T.S)">Telangana(T.S)</option>
+                <option formControlName="STATE" value="karnataka">Karnataka</option>
+                <option formControlName="STATE" value="kerala">Kerala</option>
+                <option formControlName="STATE" value="Tamil Nadu">Tamil Nadu</option>
+                </select>
+  
+            </div>
+            <br> -->
+  
+            <div class="formgroup inputbox text" >
+                <label for="address">Address : </label>
+                <input type="text" id="address" formControlName="ADDRESS" class="form-control" placeholder="You Address..." required="">
+                <span class="text2" *ngIf="registerform.controls.ADDRESS.invalid && registerform.controls.ADDRESS.touched">Please Enter You Address...</span>
+            </div>
+            <br>
+  
+  
+            <!-- <div class="formgroup inputbox text" formControlName="GENDER">   
+                <label for="gender" required="">Gender : </label>
+                <input type="radio" id="male" formControlName="GENDER" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" formControlName="GENDER" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" formControlName="GENDER" value="other">
+                <label for="other">other</label>
+            </div>
+            <br>
+  
+            <label class="formgroup inputbox text" >Vehicles<i></i></label>
+            <div formControlName="VEHICLES">
+                <br>
+                <label><input type="checkbox" formControlName="VEHICLES" value="bike">Bike</label>
+                <label><input type="checkbox" formControlName="VEHICLES" value="car">Car</label>
+                <label><input type="checkbox" formControlName="VEHICLES" value="bicycle">Bicycle</label>
+            </div>
+            <br> -->
+  
+            <div class="submit">
+                <input class="button" type="submit" name="submit" id="btn" (click)="Clickme()" value="update">
+                
+            </div>
+  
+        </form>
+          
+         
+  
+    </div>
+    <router-outlet></router-outlet>
